@@ -26,7 +26,8 @@
     "dev:rn": "npm run build:rn -- --watch",
     "dev:qq": "npm run build:qq -- --watch",
     "dev:jd": "npm run build:jd -- --watch",
-    "dev:quickapp": "npm run build:quickapp -- --watch"
+    "dev:quickapp": "npm run build:quickapp -- --watch",
+    "format": "prettier --write src/"
   },
   "browserslist": [
     "last 3 versions",
@@ -58,15 +59,17 @@
     "@types/node": "^20.2.5",
     "@types/webpack-env": "^1.18.1",
     "@typescript-eslint/eslint-plugin": "^5.59.8",
-    "@typescript-eslint/parser": "^5.59.8",
     "@vue/babel-plugin-jsx": "^1.1.1",
     "@vue/compiler-sfc": "^3.3.4",
+    "@vue/eslint-config-prettier": "^7.1.0",
+    "@vue/eslint-config-typescript": "^11.0.3",
     "babel-preset-taro": "^3.6.7",
     "css-loader": "^6.8.1",
     "eslint": "^8.41.0",
     "eslint-config-taro": "^3.6.7",
     "eslint-plugin-vue": "^9.14.1",
     "postcss": "^8.4.24",
+    "prettier": "^2.8.8",
     "style-loader": "^3.3.3",
     "stylelint": "^15.6.2",
     "ts-node": "^10.9.1",
