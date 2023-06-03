@@ -1,6 +1,6 @@
 <template>
   <view class="index">
-    <text>{{ msg }}</text>
+    <nut-button>{{ msg }}</nut-button>
   </view>
 </template>
 

@@ -37,9 +37,11 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.22.3",
+    "@nutui/nutui-taro": "^4.0.8",
     "@tarojs/components": "^3.6.7",
     "@tarojs/helper": "^3.6.7",
     "@tarojs/plugin-framework-vue3": "^3.6.7",
+    "@tarojs/plugin-html": "^3.6.7",
     "@tarojs/plugin-platform-alipay": "^3.6.7",
     "@tarojs/plugin-platform-h5": "^3.6.7",
     "@tarojs/plugin-platform-jd": "^3.6.7",
@@ -74,6 +76,7 @@
     "stylelint": "^15.6.2",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4",
+    "unplugin-vue-components": "^0.25.0",
     "vue-loader": "^17.2.1",
     "webpack": "^5.85.0"
   }
