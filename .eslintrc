@@ -2,7 +2,7 @@
 // https://eslint.vuejs.org/user-guide/#editor-integrations
 {
   "root": true,
-  "env": { "browser": true, "node": true },
+  "env": { "node": true },
   "extends": [
     "taro/vue3",
     "eslint:recommended",

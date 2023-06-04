@@ -26,6 +26,11 @@ const routes: RouteRecordRaw[] = [
       },
     ],
   },
+  {
+    name: "Login",
+    path: "/login",
+    component: () => import("../pages/login/index.vue"),
+  },
 ];
 
 const router = createRouter({ history, routes });

@@ -2,6 +2,9 @@ import { createApp } from "vue";
 import router from "./router";
 import pinia from "./store";
 
+import "./mock";
+
 const app = createApp({});
-app.use(router).use(pinia);
+app.use(router);
+app.use(pinia);
 export default app;

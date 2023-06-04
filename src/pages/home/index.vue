@@ -1,5 +1,5 @@
 <template>
   <view>
-    <text>Home Page</text>
+    <text>Home Pages</text>
   </view>
 </template>
