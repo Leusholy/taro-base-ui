@@ -7,17 +7,24 @@ const history: RouterHistory = createWebHistory();
 const routes: RouteRecordRaw[] = [
   {
     path: "/",
-    redirect: "/home",
+    redirect: "/tabs/home",
   },
   {
-    name: "Home",
-    path: "/home",
-    component: () => import("../pages/home/index.vue"),
-  },
-  {
-    name: "User",
-    path: "/user",
-    component: () => import("../pages/user/index.vue"),
+    name: "Tabs",
+    path: "/tabs",
+    component: () => import("../pages/tabs/index.vue"),
+    children: [
+      {
+        name: "TabHome",
+        path: "home",
+        component: () => import("../pages/home/index.vue"),
+      },
+      {
+        name: "TabUser",
+        path: "user",
+        component: () => import("../pages/user/index.vue"),
+      },
+    ],
   },
 ];
 
