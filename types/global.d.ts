@@ -29,3 +29,5 @@ declare namespace NodeJS {
 declare module "@tarojs/components" {
   export * from "@tarojs/components/types/index.vue3";
 }
+
+declare const TARO_API_BASE_URL: string;

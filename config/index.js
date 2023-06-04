@@ -20,8 +20,10 @@ const config = {
   },
   sourceRoot: "src",
   outputRoot: "dist",
-  plugins: ["@tarojs/plugin-html"],
-  defineConstants: {},
+  plugins: ["@tarojs/plugin-html", "@tarojs/plugin-http"],
+  defineConstants: {
+    TARO_API_BASE_URL: "",
+  },
   copy: {
     patterns: [],
     options: {},
