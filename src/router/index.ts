@@ -18,11 +18,13 @@ const routes: RouteRecordRaw[] = [
         name: "TabHome",
         path: "home",
         component: () => import("../pages/home/index.vue"),
+        meta: { title: "首页" },
       },
       {
         name: "TabUser",
         path: "user",
         component: () => import("../pages/user/index.vue"),
+        meta: { title: "我的", auth: true },
       },
     ],
   },

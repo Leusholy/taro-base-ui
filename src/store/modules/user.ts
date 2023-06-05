@@ -1,6 +1,8 @@
 import { defineStore } from "pinia";
 import { login } from "@/api/user";
 import type { LoginData } from "@/api/user";
+import { setStorageData } from "@/utils/storage";
+import { ACCESS_TOKEN } from "@/store/mutation-types";
 
 interface UserStateType {
   token: string;
@@ -13,7 +15,7 @@ export const useUserStore = defineStore("user", {
   actions: {
     async userLogin(loginForm: LoginData) {
       const { data: res } = await login(loginForm);
-      console.log(res);
+      await setStorageData(ACCESS_TOKEN, res.data.token);
     },
   },
 });
