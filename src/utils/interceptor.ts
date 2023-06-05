@@ -1,15 +1,26 @@
 import axios from "axios";
+import type {
+  AxiosError,
+  AxiosResponse,
+  InternalAxiosRequestConfig,
+} from "axios";
 
 axios.defaults.baseURL = TARO_API_BASE_URL;
 
-const errorHandler = (error) => {
+const errorHandler = (error: AxiosError) => {
   return Promise.reject(error);
 };
 
-axios.interceptors.request.use(async (config) => {
+axios.interceptors.request.use((config: InternalAxiosRequestConfig) => {
   return config;
 }, errorHandler);
 
-axios.interceptors.response.use((response) => {
-  return response;
+axios.interceptors.response.use((response: AxiosResponse) => {
+  const res = response.data;
+
+  if (res.code !== 200) {
+    return Promise.reject(new Error(res.msg || "Error"));
+  }
+
+  return res;
 }, errorHandler);

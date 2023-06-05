@@ -1,10 +1,12 @@
 <template>
   <view :class="$style.login_page">
+    <view :class="$style.login_page_head">
+      <RouterLink to="/">
+        <img :src="LogoImage" :class="$style.login_page_head_logo" />
+      </RouterLink>
+    </view>
     <view :class="$style.login_page_form">
       <nut-form ref="refModelForm" :model-value="modelForm" :rules="modelRules">
-        <nut-cell>
-          <text :class="$style.login_page_title">Hi~</text>
-        </nut-cell>
         <nut-form-item prop="username">
           <nut-input
             v-model="modelForm.username"
@@ -32,6 +34,8 @@
 import { ref, reactive } from "vue";
 import { useRouter } from "vue-router";
 import { useUserStore } from "@/store";
+
+import LogoImage from "@/assets/logo.svg";
 
 const router = useRouter();
 const userStore = useUserStore();
@@ -68,22 +72,28 @@ const onSubmit = async () => {
 
 <style lang="scss" module>
 .login_page {
-  padding: 24px;
-  height: 100%;
-  background-color: white;
+  min-height: 100vh;
 }
 
-.login_page_title {
-  font-size: 60px;
-  line-height: 60px;
+.login_page_head {
+  padding: 24px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_page_head_logo {
+  width: 80px;
+  height: 90px;
 }
 
 .login_page_form {
-  border-radius: 16px;
-  overflow: hidden;
+  padding: 0 32px;
 
   :global(.nut-cell-group__wrap) {
     margin: 0;
+    border-radius: 16px;
+    border: $button-border-width solid $button-default-border-color;
   }
 }
 </style>

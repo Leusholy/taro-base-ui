@@ -2,7 +2,13 @@
   <view>
     <RouterView />
 
-    <nut-tabbar v-model="activeTab" bottom @tab-switch="onTabSwitch">
+    <nut-tabbar
+      v-model="activeTab"
+      bottom
+      safe-area-inset-bottom
+      placeholder
+      @tab-switch="onTabSwitch"
+    >
       <nut-tabbar-item
         tab-title="首页"
         href="/tabs/home"

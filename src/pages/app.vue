@@ -1,15 +1,20 @@
 <template>
-  <view :class="$style.app_page">
-    <nut-config-provider>
-      <RouterView />
-    </nut-config-provider>
-  </view>
+  <nut-config-provider :theme-vars="themeVars">
+    <RouterView :class="$style.app_page" />
+  </nut-config-provider>
 </template>
+
+<script lang="ts" setup>
+import { reactive } from "vue";
+
+const themeVars = reactive({
+  primaryColor: "#42b883",
+});
+</script>
 
 <style lang="scss" module>
 .app_page {
-  height: 100vh;
-  overflow: hidden;
-  background-color: #f3f5f7;
+  height: calc(100vh - 104px);
+  background-color: $help-color;
 }
 </style>
