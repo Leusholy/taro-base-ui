@@ -3,8 +3,7 @@ import router from "./router";
 import pinia from "./store";
 
 import "./mock";
-
-import "@/assets/styles/prelight.css";
+import "./utils/interceptor";
 
 const app = createApp({});
 app.use(router);

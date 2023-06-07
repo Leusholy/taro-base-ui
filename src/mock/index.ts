@@ -2,6 +2,4 @@ import Mock from "mockjs";
 
 import "./services/user";
 
-Mock.setup({
-  timeout: "300-800",
-});
+Mock.setup({ timeout: "300-800" });

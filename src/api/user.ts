@@ -8,9 +8,7 @@ export interface LoginData {
 export interface LoginRes {
   code: number;
   msg: string;
-  data: {
-    token: string;
-  };
+  token: string;
 }
 
 export function login(data: LoginData) {

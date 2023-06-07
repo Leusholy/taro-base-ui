@@ -8,13 +8,13 @@
 import { reactive } from "vue";
 
 const themeVars = reactive({
-  primaryColor: "#42b883",
+  primaryColor: "#e32b6b",
 });
 </script>
 
 <style lang="scss" module>
 .app_page {
-  height: calc(100vh - 104px);
+  height: 100vh;
   background-color: $help-color;
 }
 </style>
