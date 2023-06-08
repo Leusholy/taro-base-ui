@@ -9,13 +9,10 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    NutAvatar: typeof import('@nutui/nutui-taro')['Avatar']
+    NutAnimate: typeof import('@nutui/nutui-taro')['Animate']
     NutButton: typeof import('@nutui/nutui-taro')['Button']
     NutConfigProvider: typeof import('@nutui/nutui-taro')['ConfigProvider']
     NutEmpty: typeof import('@nutui/nutui-taro')['Empty']
-    NutForm: typeof import('@nutui/nutui-taro')['Form']
-    NutFormItem: typeof import('@nutui/nutui-taro')['FormItem']
-    NutInput: typeof import('@nutui/nutui-taro')['Input']
     NutTabbar: typeof import('@nutui/nutui-taro')['Tabbar']
     NutTabbarItem: typeof import('@nutui/nutui-taro')['TabbarItem']
     RouterLink: typeof import('vue-router')['RouterLink']

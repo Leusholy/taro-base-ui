@@ -1,6 +1,8 @@
 <template>
   <view :class="$style.page">
-    <img :src="VueImage" :class="$style.page_logo" />
+    <nut-animate type="float" :loop="true" duration="3000">
+      <img :src="VueImage" :class="$style.page_logo" />
+    </nut-animate>
     <text :class="$style.page_title">Taro Base UI</text>
   </view>
 </template>

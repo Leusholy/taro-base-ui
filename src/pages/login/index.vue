@@ -17,6 +17,7 @@
 </template>
 
 <script lang="ts" setup>
+import Taro from "@tarojs/taro";
 import { useRouter } from "vue-router";
 import { useUserStore } from "@/store";
 
@@ -28,7 +29,11 @@ const userStore = useUserStore();
 
 const onSubmit = async () => {
   await userStore.userLogin();
-  router.replace("/");
+  Taro.showToast({
+    title: "登录成功!",
+    icon: "success",
+    success: () => router.replace("/"),
+  });
 };
 </script>
 
